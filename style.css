@@ -1,0 +1,35 @@
+.parentprofile{
+    border: 1px solid grey !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 20%;
+    margin: 45px auto;
+    height: 60vh;
+    padding-top: 20px;
+}
+.parentprofile,div>h5{
+    border: 1px solid gray;
+    padding:5px;
+    border-radius: 5px;
+    text-align: center;
+}
+.parentprofile>div{
+    margin-top: 10px;
+}
+
+.listitems>li{
+    padding:1px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid gray!important;
+    margin-top: 20px;
+    margin-bottom: -1px;
+    
+}
+.parent{ 
+ border: 1px solid red!important;
+}
+
+
