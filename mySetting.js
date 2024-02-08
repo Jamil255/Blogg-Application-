@@ -12,6 +12,7 @@ async function mySettingFun() {
 
     const docRef = doc(db, "users", uid);
     const docSnap = await getDoc(docRef);
+    let userProfile = document.getElementById("userProfile")
 
     if (docSnap.exists()) {
         console.log(docSnap.data());
@@ -23,24 +24,23 @@ async function mySettingFun() {
         }
         console.log(userObj.firstName);
 
-        let userUi = `<div class="card parentprofile">
-         <div class="card-body " >
-             <h5 class="card-title ">User Information</h5>
-             <ul class="list-group list-group-flush listitems">
-                 <li class="list-group-item"><strong>First Name:</strong> ${userObj.firstName}</li>
-                 <li class="list-group-item"><strong>Last Name:</strong> ${userObj.lastName}</li>
-                 <li class="list-group-item"><strong>Email:</strong> ${userObj.email}</li>
-                 <li class="list-group-item"><strong>Phone Number:</strong> ${userObj.phone}</li>
-             </ul>
-         </div>
-     </div>`
-        userProfile.innerHTML+=userUi
+        let userUi =`<div class="card parentprofile">
+        <div class="card-body">
+            <h5 class="card-title">User Information</h5>
+            <ul class="list-group list-group-flush listitems">
+                <li class="list-group-item"><strong>First Name:</strong> ${userObj.firstName}</li>
+                <li class="list-group-item"><strong>Last Name:</strong> ${userObj.lastName}</li>
+                <li class="list-group-item"><strong>Email:</strong> ${userObj.email}</li>
+                <li class="list-group-item"><strong>Phone Number:</strong> ${userObj.phone}</li>
+            </ul>
+        </div>
+    </div>`;
+
+        userProfile.innerHTML += userUi
     } else {
-        // docSnap.data() will be undefined in this case
         console.log("No such document!");
     }
 }
-let userProfile = document.getElementById("userProfile")
 function LogoutFun(ele) {
     localStorage.clear()
     location.replace("./index.html")

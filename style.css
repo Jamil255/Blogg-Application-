@@ -1,3 +1,6 @@
+/* 
+
+
 .parentprofile{
     border: 1px solid grey !important;
     display: flex;
@@ -32,4 +35,18 @@
  border: 1px solid red!important;
 }
 
+ */
+*/ html,
+body {
+    height: 100%;
+    margin: 0,;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.parentprofile {
+    max-width: 400px;
+    /* You can adjust this value as needed */
+    width: 100%;
+}
