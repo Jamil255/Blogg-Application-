@@ -29,7 +29,7 @@ const firebaseConfig = {
   const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-function sginupFun() {
+function  signUpFun() {
     let email = document.getElementById("email")
     let password = document.getElementById("password")
     let FirstName = document.getElementById("FirstName")
@@ -56,7 +56,7 @@ function sginupFun() {
         });
 }
 
-function sginInFun() {
+function loginFun() {
     let email = document.getElementById("email")
     let password = document.getElementById("password")
 
@@ -83,8 +83,8 @@ function sginInFun() {
             alert(error.code)
         });
 }
-window.sginupFun = sginupFun
-window.sginInFun = sginInFun
+window.signUpFun = signUpFun
+window.loginFun = loginFun
 
 window.addEventListener("load", () => {
     console.log("Loading");
