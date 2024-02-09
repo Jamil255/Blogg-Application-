@@ -24,17 +24,25 @@ async function mySettingFun() {
         }
         console.log(userObj.firstName);
 
-        let userUi =`<div class="card parentprofile">
-        <div class="card-body">
-            <h5 class="card-title">User Information</h5>
-            <ul class="list-group list-group-flush listitems">
-                <li class="list-group-item"><strong>First Name:</strong> ${userObj.firstName}</li>
-                <li class="list-group-item"><strong>Last Name:</strong> ${userObj.lastName}</li>
-                <li class="list-group-item"><strong>Email:</strong> ${userObj.email}</li>
-                <li class="list-group-item"><strong>Phone Number:</strong> ${userObj.phone}</li>
-            </ul>
-        </div>
-    </div>`;
+        let userUi = `
+        <div class="container mt-4">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card parentprofile">
+                        <div class="card-body">
+                            <h5 class="card-title">User Information</h5>
+                            <ul class="list-group list-group-flush listitems">
+                                <li class="list-group-item"><strong>First Name:</strong> ${userObj.firstName}</li>
+                                <li class="list-group-item"><strong>Last Name:</strong> ${userObj.lastName}</li>
+                                <li class="list-group-item"><strong>Email:</strong> ${userObj.email}</li>
+                                <li class="list-group-item"><strong>Phone Number:</strong> ${userObj.phone}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+
 
         userProfile.innerHTML += userUi
     } else {
