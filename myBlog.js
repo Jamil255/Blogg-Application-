@@ -52,7 +52,7 @@ function listUi(title, desc, image, id, isPrivate) {
     } else {
         // lockValue
     }
-    let ui = `<div class="card contianer" style="width: 18rem">
+    let ui = `<div class="card contianer"  style="width: 18rem" id="cardsUi">
         <img src=${image} class="card-img-top" alt="..."  height="140px"/>
         <div class="card-body ">
             <h6 class="card-title">${title}  ${lockValue}</h6>
@@ -75,8 +75,9 @@ async function deleteBlog(ele) {
     let blogId = ele.id
     console.log(blogId)
     await deleteDoc(doc(db, 'blogs', blogId))
-    ele.parentNode.parentNode.parentNode.innerHTML = ''
-    pageLoad()
+    let cardsUi = document.getElementById("cardsUi")
+    cardsUi.remove()
+
 }
 
 async function editBlog(ele) {
