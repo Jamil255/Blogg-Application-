@@ -39,7 +39,7 @@
 */ html,
 body {
     height: 100%;
-    margin: 0,;
+    margin: 0, ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,5 +69,7 @@ body {
     margin-bottom: 30px;
     text-align: center;
 }
+
+
 
 /* loader */
