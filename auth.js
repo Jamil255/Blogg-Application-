@@ -23,13 +23,13 @@ const firebaseConfig = {
     storageBucket: "blogg-app-f7e5c.appspot.com",
     messagingSenderId: "182415241591",
     appId: "1:182415241591:web:dd790028b691806527b172"
-  };
+};
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-function  signUpFun() {
+function signUpFun() {
     let email = document.getElementById("email")
     let password = document.getElementById("password")
     let FirstName = document.getElementById("FirstName")
@@ -61,12 +61,12 @@ function loginFun() {
     let password = document.getElementById("password")
 
     signInWithEmailAndPassword(auth, email.value, password.value)
-        .then( async function (success) {
+        .then(async function (success) {
             const docRef = doc(db, "users", success.user.uid);
             const docSnap = await getDoc(docRef);
-            
+
             if (docSnap.exists()) {
-              console.log("Document data:", docSnap.data());
+                console.log("Document data:", docSnap.data());
                 localStorage.setItem("uid", success.user.uid)
                 localStorage.setItem("userData", JSON.stringify(docSnap.data()))
                 console.log(success, "success")
@@ -75,9 +75,9 @@ function loginFun() {
             } else {
                 // docSnap.data() will be undefined in this case
                 alert("something went wrong")
-              console.log("No such document!");
+                console.log("No such document!");
             }
-          
+
         })
         .catch(function (error) {
             alert(error.code)

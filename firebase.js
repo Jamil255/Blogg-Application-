@@ -25,26 +25,19 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js"
 
 
-  const firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyD34RSnPky3N20aMY89yX9YTPKKWLOdOUg",
     authDomain: "blogg-app-f7e5c.firebaseapp.com",
     projectId: "blogg-app-f7e5c",
     storageBucket: "blogg-app-f7e5c.appspot.com",
     messagingSenderId: "182415241591",
     appId: "1:182415241591:web:dd790028b691806527b172"
-  };
+};
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-// Initialize Cloud Firestore and get a reference to the service
+const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 const auth = getAuth();
 const storage = getStorage()
-
-
-
-// Import the functions you need from the SDKs you need
-
 
 
 export {
