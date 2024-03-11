@@ -26,7 +26,7 @@ import {
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD34RSnPky3N20aMY89yX9YTPKKWLOdOUg",
+    apiKey:"AIzaSyD34RSnPky3N20aMY89yX9YTPKKWLOdOUg",
     authDomain: "blogg-app-f7e5c.firebaseapp.com",
     projectId: "blogg-app-f7e5c",
     storageBucket: "blogg-app-f7e5c.appspot.com",
